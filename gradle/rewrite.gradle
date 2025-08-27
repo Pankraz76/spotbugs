@@ -1,5 +1,6 @@
 rewrite {
     activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods")
+    exclusion("**sfBugs**")
     setExportDatatables(true)
     setFailOnDryRunResults(true)
 }
