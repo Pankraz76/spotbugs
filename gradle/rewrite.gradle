@@ -1,14 +1,13 @@
 rewrite {
     //activeRecipe("org.openrewrite.staticanalysis.LowercasePackage")
     //activeRecipe("org.openrewrite.staticanalysis.MissingOverrideAnnotation")
-    //activeRecipe("org.openrewrite.staticanalysis.ModifierOrder")
+    activeRecipe("org.openrewrite.staticanalysis.ModifierOrder")
     //activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedPrivateFields")
     //activeRecipe("tech.picnic.errorprone.refasterrules.BugCheckerRulesRecipes")
-    activeRecipe("org.openrewrite.java.RemoveUnusedImports")
+    //activeRecipe("org.openrewrite.java.RemoveUnusedImports")
     activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedLocalVariables")
     activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods")
-    exclusion("**sfBugs**")
-    exclusion("**spotbugsTestCases**")
+    exclusion("**sfBugs**", "**spotbugsTestCases**")
     setExportDatatables(true)
     setFailOnDryRunResults(true)
 }
