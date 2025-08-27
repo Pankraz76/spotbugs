@@ -69,7 +69,6 @@ jobs:
         # https://community.sonarsource.com/t/sonarcloud-now-not-updating-github-pr-and-checks/6595/17
         if: matrix.java == '21'
         run: ./gradlew spotlessCheck rewriteDryRun build smoketest ${SONAR_LOGIN:+sonar} --no-daemon "-Dsonar.token=$SONAR_LOGIN" --scan
-        timeout-minutes: 90
         env:
           SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
           ORG_GRADLE_PROJECT_keystorepass: ${{ secrets.KEYSTORE_PASS }}
