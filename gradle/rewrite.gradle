@@ -1,12 +1,16 @@
 rewrite {
     activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods")
+    activeRecipe("org.openrewrite.java.RemoveUnusedImports")
+    activeRecipe("org.openrewrite.staticanalysis.LowercasePackage")
+    activeRecipe("org.openrewrite.staticanalysis.MissingOverrideAnnotation")
+    activeRecipe("org.openrewrite.staticanalysis.ModifierOrder")
+    activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedLocalVariables")
+    activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedPrivateFields")
+    activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods")
+    activeRecipe("tech.picnic.errorprone.refasterrules.BugCheckerRulesRecipes")
     exclusion("**sfBugs**")
     setExportDatatables(true)
     setFailOnDryRunResults(true)
-}
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
