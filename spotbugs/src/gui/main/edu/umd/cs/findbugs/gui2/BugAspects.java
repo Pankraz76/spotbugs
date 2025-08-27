@@ -128,9 +128,9 @@ public class BugAspects implements Iterable<BugAspects.SortableValue> {
     }
 
     static class SortableValue {
-        final public Sortables key;
+        public final Sortables key;
 
-        final public String value;
+        public final String value;
 
         public SortableValue(Sortables key, String value) {
             this.key = key;
