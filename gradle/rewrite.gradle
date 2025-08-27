@@ -1,0 +1,13 @@
+rewrite {
+    activeRecipe("org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods")
+    setExportDatatables(true)
+    setFailOnDryRunResults(true)
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    rewrite("org.openrewrite.recipe:rewrite-static-analysis:2.15.0")
+}
