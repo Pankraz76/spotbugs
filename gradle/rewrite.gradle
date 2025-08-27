@@ -8,6 +8,7 @@ rewrite {
     //activeRecipe("org.openrewrite.staticanalysis.ModifierOrder")
     //activeRecipe("tech.picnic.errorprone.refasterrules.BugCheckerRulesRecipes")
     exclusion("**sfBugs**")
+    exclusion("**spotbugsTestCases**")
     setExportDatatables(true)
     setFailOnDryRunResults(true)
 }
