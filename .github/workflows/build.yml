@@ -65,7 +65,7 @@ jobs:
       #  run: gpg --quiet --batch --yes --decrypt --passphrase="$GPG_SECRET_PASSPHRASE" --output spotbugs.jks .github/workflows/spotbugs.jks.gpg;
       #  env:
       #    GPG_SECRET_PASSPHRASE: ${{ secrets.GPG_SECRET_PASSPHRASE }}
-      - name: Verify Build JDK ${{ matrix.java }}, ${{ matrix.os }} (dependencyCheckAnalyze, spotlessCheck, smoketest)
+      - name: Pre-Build verification
         run: ./gradlew dependencyCheckAnalyze spotlessCheck smoketest --no-daemon --scan
       - name: Build with Sonar JDK ${{ matrix.java }}, ${{ matrix.os }}
         # https://community.sonarsource.com/t/sonarcloud-now-not-updating-github-pr-and-checks/6595/17
